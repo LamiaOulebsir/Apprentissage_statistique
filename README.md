@@ -1,3 +1,5 @@
 # Apprentissage_statistique
-Lamia Oulebsir
-Naima Radouan
+
+## Membres du projet
+- Lamia Oulebsir
+- Naima Radouan
