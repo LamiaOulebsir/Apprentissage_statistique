@@ -89,6 +89,7 @@ frontiere(f_grid, X_train, Y_train, w=None, step=50, alpha_choice=1)
 
 iris = datasets.load_iris()
 X = iris.data
+scaler = StandardScaler()
 X = scaler.fit_transform(X)
 y = iris.target
 X = X[y != 0, :2]
@@ -97,7 +98,8 @@ y = y[y != 0]
 # split train test (say 25% for the test)
 # You can shuffle and then separate or you can just use train_test_split 
 #whithout shuffling (in that case fix the random state (say to 42) for reproductibility)
-# ... TODO
+X, y = shuffle(X, y, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
 ###############################################################################
 # fit the model with linear vs polynomial kernel
 ###############################################################################
@@ -107,8 +109,11 @@ y = y[y != 0]
 
 # fit the model and select the best hyperparameter C
 parameters = {'kernel': ['linear'], 'C': list(np.logspace(-3, 3, 200))}
-# ... TODO
-clf_linear = # ... TODO
+clf_linear = GridSearchCV(SVC(), parameters, cv=5)
+clf_linear.fit(X_train, y_train)
+# 3 Afficher le meilleur paramètre C et la précision
+print('Meilleur paramètre C pour le noyau linéaire :', clf_linear.best_params_)
+
 
 # compute the score
 
