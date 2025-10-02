@@ -55,7 +55,7 @@ Pour compiler le fichier `tp.tex` et générer le rapport au format PDF, suivez 
 ## AUTEURS :
 ## Auteurs
 
-- [RADOUAN Naima](https://github.com/tonpseudo)  
-- [Oulebsir Lamia ]()
+- [RADOUAN Naima](https://github.com/naimaradouan)  
+- [Oulebsir Lamia ](https://github.com/LamiaOulebsir)
 
 
