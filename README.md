@@ -52,7 +52,7 @@ Pour compiler le fichier `tp.tex` et générer le rapport au format PDF, suivez 
   
 
 
-## AUTEURS :
+
 ## Auteurs
 
 - [RADOUAN Naima](https://github.com/naimaradouan)  
