@@ -1,6 +1,6 @@
 # TP – Support Vector Machines (SVM)
 
-**Auteurs : [-RADOUAN Naima
+**Auteurs : -RADOUAN Naima
              -OULEBSIR lamia ]**  
 Master 2 MIND-SIAD – Université de Montpellier  
 
