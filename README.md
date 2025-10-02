@@ -12,6 +12,7 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 
 
 
+```
 ## Organisation du dépôt
 
 ├── README.md # Présentation et instructions
@@ -24,13 +25,13 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 │ └── TP_ML_SVM.pdf # Rapport compilé en PDF
 └── .gitignore # Fichiers/dossiers ignorés par Git
 
-
+```
 ---
 
 ## Génération du rapport sur Overleaf
 
 1. **Téléchargement des fichiers**  
-   - Récupérez tout le contenu du dépôt : `tp.tex`, `image/`, `src/(si vous souhaitez les exécuter pour reproduire les résultats)` et `requirements.txt`.
+   - Récupérez tout le contenu du dépôt : `tp.tex`, `image/`, `src/`(si vous souhaitez les exécuter pour reproduire les résultats) et `requirements.txt`.
 
 2. **Création du projet sur Overleaf**  
    - Connectez-vous sur [Overleaf](https://www.overleaf.com/)  
