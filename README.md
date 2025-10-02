@@ -7,7 +7,7 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 - étude sur le jeu de données *Iris*,  
 - reconnaissance de visages avec le jeu de données *LFW*,  
 - impact des variables de nuisance sur les performances,  
-- réduction de dimension via **ACP (PCA)**,  
+- réduction de dimension via *ACP (PCA)*,  
 - exploration interactive avec une interface graphique (`svm_gui.py`).  
 
 
