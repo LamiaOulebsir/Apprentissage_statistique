@@ -12,9 +12,9 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 
 
 
-```
-## Organisation du dépôt
 
+## Organisation du dépôt
+```
 ├── README.md # Présentation et instructions
 ├── src/ # Scripts Python
 │ ├── svm_script.py # Code principal du TP
@@ -28,19 +28,34 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 ```
 ---
 
-## Génération du rapport sur Overleaf
+## Génération du rapport LaTeX
 
-1. **Téléchargement des fichiers**  
-   - Récupérez tout le contenu du dépôt : `tp.tex`, `image/`, `src/`(si vous souhaitez les exécuter pour reproduire les résultats) et `requirements.txt`.
+Pour compiler le fichier `tp.tex` et générer le rapport au format PDF, suivez les étapes ci-dessous :
 
-2. **Création du projet sur Overleaf**  
+1. **Télécharger les fichiers**  
+   - Récupérez tout le contenu du dépôt :  
+     - `tp.tex` : fichier LaTeX principal  
+     - `image/` : dossier contenant les images utilisées dans le rapport  
+     - `src/` : dossier contenant les scripts Python (optionnel pour la génération du rapport)  
+
+2. **Créer un projet sur Overleaf**  
    - Connectez-vous sur [Overleaf](https://www.overleaf.com/)  
-   - Cliquez sur **Nouveau projet → Import project** et importez les fichiers  
+   - Cliquez sur **Nouveau projet → Import project**  
+   - Importez tous les fichiers et dossiers nécessaires  
 
-3. **Compilation du document**  
+3. **Compiler le document**  
    - Sélectionnez `tp.tex` comme fichier principal  
    - Cliquez sur **Recompiler** pour générer le PDF  
 
-4. **Téléchargement du PDF**  
-   - Une fois la compilation terminée, vous pouvez télécharger le PDF généré  
+4. **Télécharger le PDF**  
+   - Une fois la compilation terminée, vous pouvez télécharger le PDF généré
+  
+
+
+## AUTEURS :
+## Auteurs
+
+- [RADOUAN Naima](https://github.com/tonpseudo)  
+- [Oulebsir Lamia ]()
+
 
