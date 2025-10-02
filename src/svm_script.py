@@ -100,6 +100,7 @@ y = y[y != 0]
 #whithout shuffling (in that case fix the random state (say to 42) for reproductibility)
 X, y = shuffle(X, y, random_state=42)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=42)
+
 ###############################################################################
 # fit the model with linear vs polynomial kernel
 ###############################################################################
@@ -123,6 +124,7 @@ print('Generalization score for linear kernel: %s, %s' %
 
 #%%
 # Q2 polynomial kernel
+
 Cs = list(np.logspace(-3, 3, 5))
 gammas = 10. ** np.arange(1, 2)
 degrees = np.r_[1, 2, 3]
@@ -144,12 +146,12 @@ print('Generalization score for polynomial kernel: %s, %s' %
 # display your results using frontiere (svm_source.py)
 
 def f_linear(xx):
-    # ...
-     return clf_linear.predict(xx.reshape(1,-1))
+    """Classifier: needed to avoid warning due to shape issues"""
+    return clf_linear.predict(xx.reshape(1,-1))
 
 def f_poly(xx):
-    # ...
-     return clf_poly.predict(xx.reshape(1,-1))
+   """Classifier: needed to avoid warning due to shape issues"""
+   return clf_poly.predict(xx.reshape(1,-1))
 
 plt.ion()
 plt.figure(figsize=(15, 5))
@@ -255,6 +257,7 @@ images_train, images_test = images[
 #%%
 # Q4
 from sklearn.metrics import accuracy_score
+
 print("--- Linear kernel ---")
 print("Fitting the classifier to the training set")
 t0 = time()
@@ -284,26 +287,28 @@ plt.ylabel("Scores d'apprentissage")
 plt.xscale("log")
 plt.tight_layout()
 plt.show()
+
 print("Best score: {}".format(np.max(scores)))
 
 print("Predicting the people names on the testing set")
 t0 = time()
 
-# Utiliser la meilleure valeur de C pour prédire
+# Use the best value of C for prediction
+
 best_clf = SVC(kernel='linear', C=Cs[ind])
 best_clf.fit(X_train, y_train)
 y_pred_best = best_clf.predict(X_test)
 
-# Afficher le score final avec le meilleur C
+# Display the final score with the best C
 final_score = accuracy_score(y_test, y_pred_best)
 print("Final accuracy with best C: {:.2f}".format(final_score))
 
 #%%
+
 # predict labels for the X_test images with the best classifier
 clf =  best_clf
 t0 = time()
 y_pred = clf.predict(X_test)  # Prédiction des labels
-
 print("done in %0.3fs" % (time() - t0))
 # The chance level is the accuracy that will be reached when constantly predicting the majority class.
 print("Chance level : %s" % max(np.mean(y), 1. - np.mean(y)))
@@ -335,35 +340,47 @@ def run_svm_cv(_X, _y):
     _X_train, _X_test = _X[_train_idx, :], _X[_test_idx, :]
     _y_train, _y_test = _y[_train_idx], _y[_test_idx]
 
+    # Paramètres pour SVM linéaire avec C variant sur une plage logarithmique
     _parameters = {'kernel': ['linear'], 'C': list(np.logspace(-3, 3, 5))}
     _svr = svm.SVC()
     _clf_linear = GridSearchCV(_svr, _parameters)
     _clf_linear.fit(_X_train, _y_train)
 
+    # Calcul des scores sur les données d'entraînement et de test
     print('Generalization score for linear kernel: %s, %s \n' %
           (_clf_linear.score(_X_train, _y_train), _clf_linear.score(_X_test, _y_test)))
 
+# Exécution du SVM sur les données sans nuisance
 print("Score sans variable de nuisance")
 run_svm_cv(X, y)
 
-print("Score avec variable de nuisance")
+# Ajout des variables de nuisance (bruit)
 n_features = X.shape[1]
-# On rajoute des variables de nuisances
 sigma = 1
-noise = sigma * np.random.randn(n_samples, 300, ) 
-#with gaussian coefficients of std sigma
-X_noisy = np.concatenate((X, noise), axis=1)
-X_noisy = X_noisy[np.random.permutation(X.shape[0])]
-#  use run_svm_cv on noisy data
+# Génération de 300 variables de nuisance avec une distribution gaussienne
+noise = sigma * np.random.randn(n_samples, 300)
+X_noisy = np.concatenate((X, noise), axis=1)  # Ajout des variables de nuisance aux données originales
+X_noisy = X_noisy[np.random.permutation(X.shape[0])]  # Permutation aléatoire des données pour ne pas biaiser les résultats
+
+# Exécution du SVM sur les données avec variables de nuisance
 print("Score avec variables de nuisance")
 run_svm_cv(X_noisy, y)
 
 #%%
 # Q6
-print("Score apres reduction de dimension")
 
-n_components = 20  # jouer avec ce parametre
-pca = PCA(n_components=n_components).fit(X_noisy)
-# ... Apply PCA and run_svm to the noisy data
+print("Score après réduction de dimension avec PCA")
+
+n_components = 30 # Number of principal components (can be adjusted)
+
+pca = PCA(n_components=n_components, svd_solver='randomized').fit(X_noisy)
+
+# Transform the data using PCA
 X_noisy_pca = pca.transform(X_noisy)
 
+# Display the explained variance to choose the optimal number of components
+
+explained_variance = np.sum(pca.explained_variance_ratio_)
+print(f"Variance expliquée avec {n_components} composantes : {explained_variance:.2%}")
+
+# %%
