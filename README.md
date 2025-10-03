@@ -29,6 +29,26 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 
 ```
 ---
+## Installation et exécution
+
+1. **Créer un environnement virtuel** (optionnel mais recommandé) :  
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # Linux/Mac
+   venv\Scripts\activate      # Windows
+   ```
+2. **Installer les dépendances**
+```
+pip install -r requirements.txt
+```
+3. **Lancer le script principal**
+```
+python src/svm_script.py
+```
+4. **Utiliser l’interface graphique**
+```
+python src/svm_gui.py
+```
 
 ## Génération du rapport LaTeX
 
@@ -52,6 +72,9 @@ Pour compiler le fichier `TP_SVM.tex` et générer le rapport au format PDF, sui
 4. **Télécharger le PDF**  
    - Une fois la compilation terminée, vous pouvez télécharger le PDF généré
   
+## Rapport PDF
+
+👉 Le rapport final est disponible ici : [TP_SVM.pdf](rapport/TP_SVM.pdf)
 
 
 
