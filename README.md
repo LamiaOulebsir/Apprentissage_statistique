@@ -1,4 +1,4 @@
-# TP – Support Vector Machines (SVM)
+# TP3 – Support Vector Machines (SVM)
 
 ## Présentation
 Ce dépôt contient le compte-rendu du TP consacré aux **Support Vector Machines (SVM)**.  
