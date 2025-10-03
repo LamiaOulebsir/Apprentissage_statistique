@@ -23,6 +23,7 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 ├── rapport/
 │ ├── TP_ML_SVM.tex # Rapport LaTeX
 │ └── TP_ML_SVM.pdf # Rapport compilé en PDF
+├── requirements.txt
 └── .gitignore # Fichiers/dossiers ignorés par Git
 
 ```
