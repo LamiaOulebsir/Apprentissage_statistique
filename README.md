@@ -32,11 +32,11 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 
 ## Génération du rapport LaTeX
 
-Pour compiler le fichier `tp.tex` et générer le rapport au format PDF, suivez les étapes ci-dessous :
+Pour compiler le fichier `TP_SVM.tex` et générer le rapport au format PDF, suivez les étapes ci-dessous :
 
 1. **Télécharger les fichiers**  
    - Récupérez tout le contenu du dépôt :  
-     - `tp.tex` : fichier LaTeX principal  
+     - `TP_SVM.tex` : fichier LaTeX principal  
      - `images/` : dossier contenant les images utilisées dans le rapport  
      - `src/` : dossier contenant les scripts Python (optionnel pour la génération du rapport)  
 
@@ -46,7 +46,7 @@ Pour compiler le fichier `tp.tex` et générer le rapport au format PDF, suivez 
    - Importez tous les fichiers et dossiers nécessaires  
 
 3. **Compiler le document**  
-   - Sélectionnez `tp.tex` comme fichier principal  
+   - Sélectionnez `TP_SVM.tex` comme fichier principal  
    - Cliquez sur **Recompiler** pour générer le PDF  
 
 4. **Télécharger le PDF**  
