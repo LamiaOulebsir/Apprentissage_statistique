@@ -115,7 +115,6 @@ clf_linear.fit(X_train, y_train)
 # 3 Afficher le meilleur paramètre C et la précision
 print('Meilleur paramètre C pour le noyau linéaire :', clf_linear.best_params_)
 
-
 # compute the score
 
 print('Generalization score for linear kernel: %s, %s' %
@@ -171,6 +170,7 @@ plt.tight_layout()
 plt.draw()
 
 #%%
+#Q3
 ###############################################################################
 #               SVM GUI
 ###############################################################################
