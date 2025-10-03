@@ -22,7 +22,8 @@ L’objectif de ce travail est de mettre en pratique les notions vues en cours �
 │ └── svm_gui.py # Interface graphique pour manipuler les SVM
 ├── rapport/
 │ ├── TP_ML_SVM.tex # Rapport LaTeX
-│ └── TP_ML_SVM.pdf # Rapport compilé en PDF
+│ ├── TP_ML_SVM.pdf # Rapport compilé en PDF
+  └── images # dossier contenant les images utilisées dans le rapport 
 ├── requirements.txt # Dépendances Python du projet
 └── .gitignore # Fichiers/dossiers ignorés par Git
 
