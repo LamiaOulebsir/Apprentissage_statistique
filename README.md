@@ -36,7 +36,7 @@ Pour compiler le fichier `tp.tex` et générer le rapport au format PDF, suivez 
 1. **Télécharger les fichiers**  
    - Récupérez tout le contenu du dépôt :  
      - `tp.tex` : fichier LaTeX principal  
-     - `image/` : dossier contenant les images utilisées dans le rapport  
+     - `images/` : dossier contenant les images utilisées dans le rapport  
      - `src/` : dossier contenant les scripts Python (optionnel pour la génération du rapport)  
 
 2. **Créer un projet sur Overleaf**  
