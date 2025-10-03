@@ -58,6 +58,6 @@ Pour compiler le fichier `TP_SVM.tex` et générer le rapport au format PDF, sui
 ## Auteurs
 
 - [RADOUAN Naima](https://github.com/naimaradouan)  
-- [Oulebsir Lamia ](https://github.com/LamiaOulebsir)
+- [OULEBSIR Lamia ](https://github.com/LamiaOulebsir)
 
 
